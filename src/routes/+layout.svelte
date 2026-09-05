@@ -9,12 +9,20 @@
     import NoiseOverlay from '$cmp/layout/NoiseOverlay.svelte';
     import PromptProvider from '$cmp/PromptProvider.svelte';
     import {registerServiceWorker} from '$src/lib/register-sw';
+    import {toAbsoluteUrl} from '$lib/seo';
 
     onMount(() => {
         registerServiceWorker();
         themeStorage.load();
     });
 </script>
+
+<svelte:head>
+    <link rel="canonical" href={toAbsoluteUrl($page.url.pathname)} />
+    <meta property="og:url" content={toAbsoluteUrl($page.url.pathname)} />
+    <meta property="og:site_name" content="Tokeko" />
+    <meta name="twitter:card" content="summary_large_image" />
+</svelte:head>
 
 <ThemeProvider
         theme={currentTheme}
