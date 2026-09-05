@@ -19,13 +19,15 @@
             $installEventStore = e
         })
     })
+    import { serializeJsonLd, softwareApplicationLd } from '$lib/seo';
 </script>
 
 <svelte:head>
-    <title>Tokeko</title>
-    <meta name="description" content="An educational platform designed to help users understand and learn about different types of
-                        parsers, grammar structures, and parsing techniques. With interactive features, you can explore
-                        complex parsing concepts in a visual and intuitive way."/>
+    <title>Tokeko — learn LR(1) and LALR parsers interactively</title>
+    <meta name="description" content="Write your own grammar and watch an LR(1) or LALR parser build its FIRST and FOLLOW sets, automaton and parse tables, then trace how it parses your input, step by step."/>
+    <meta property="og:title" content="Tokeko — learn LR(1) and LALR parsers interactively"/>
+    <meta property="og:description" content="Write your own grammar and watch an LR(1) or LALR parser build its FIRST and FOLLOW sets, automaton and parse tables, then trace how it parses your input, step by step."/>
+    {@html `<script type="application/ld+json">${serializeJsonLd(softwareApplicationLd())}</script>`}
 </svelte:head>
 
 <Nav/>

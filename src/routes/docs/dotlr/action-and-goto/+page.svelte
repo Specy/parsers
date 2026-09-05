@@ -59,7 +59,7 @@
             </p>
         </li>
     </ol>
-    <h1>GOTO table</h1>
+    <h2>GOTO table</h2>
     <p>The <b>GOTO</b> table controls transitions between states based on non-terminal symbols. After a
         <b>reduce</b> operation (where a rule&#39;s right-hand side is reduced to its left-hand side
         non-terminal), the parser needs to transition to a new state based on the non-terminal that was just reduced.

@@ -54,9 +54,9 @@ while first_sets.has_changed():
         />
     </Card>
 
-    <h1>
+    <h2>
         Follow set
-    </h1>
+    </h2>
 
     <p>The <b>FOLLOW set</b> of a symbol in a grammar represents the set of tokens that can appear immediately
         after that symbol in some derivation of the grammar. This set is crucial for constructing parsers, particularly
